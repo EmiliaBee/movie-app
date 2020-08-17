@@ -1,0 +1,23 @@
+<table class="table table-striped">
+
+    <tr *ngFor="let movie of movies">
+    <td>{{movie.title | uppercase}}</td>    
+    <td>{{movie.director}}</td>    
+    <td>{{movie.year}}</td>    
+    <td> <a class="btn btn-info" routerLink="/moviedetail/{{movie.id}}"> View </a></td>
+
+
+</tr>
+</table>
+
+<div class="container" *ngIf="movie">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>
+            {{this.movie.title}}
+        </h1>
+    </div>
+    </div>
+
+
+</div>>
