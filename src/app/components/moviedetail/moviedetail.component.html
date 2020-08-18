@@ -1,12 +1,13 @@
-<div class="container" *ngIf="movie">
-    <div class="row">
-        <div class="col-md-12">
-            <h1>
-            {{this.movie.title}}
-        </h1>
-    </div>
-    </div>
-
-
-</div>>
-
+<div class="row">
+  <div class="col-md-12">
+    <h1>
+      {{ this.movie.title }}
+    </h1>
+  </div>
+  <div class="col-md-12">
+    <ul class="list-group">
+        <li class="list-group-item">Cast</li>
+        <li class="list-group-item" *ngFor='let actor of this.movie.cast.split(",")'> {{actor}} </li>
+      </ul>
+  </div>
+</div>
