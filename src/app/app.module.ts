@@ -6,12 +6,14 @@ import { MovielistingComponent } from './components/movielisting/movielisting.co
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { MoviedetailComponent } from './components/moviedetail/moviedetail.component';
+import { BookingComponent } from './components/booking/booking.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MovielistingComponent,
     MoviedetailComponent,
+    BookingComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,4 @@
+.seat { border: solid 1px red; width: 20px; height: 20px; margin: 15px;}
+
+.selected {background-color: red;}
+.reserved {background-color: green}

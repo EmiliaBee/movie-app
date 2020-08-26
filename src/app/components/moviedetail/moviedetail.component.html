@@ -1,13 +1,42 @@
-<div class="row">
-  <div class="col-md-12">
-    <h1>
-      {{ this.movie.title }}
-    </h1>
+<div class="container" *ngIf="movie">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>
+        {{ movie.title }}
+      </h3>
+    </div>
   </div>
-  <div class="col-md-12">
-    <ul class="list-group">
-        <li class="list-group-item">Cast</li>
-        <li class="list-group-item" *ngFor='let actor of this.movie.cast.split(",")'> {{actor}} </li>
+
+  <div   class="row">
+    <div class="col-md-4">
+      <ul class="list-group">
+        <li class="list-group-item active">Cast</li>
+        <li
+          class="list-group-item"
+          *ngFor="let actor of this.movie.cast.split(',')"
+        >
+          {{ actor }}
+        </li>
       </ul>
+    </div>
+
+    <div class="col-md-8">
+      <table id="main" class="table">
+      
+
+         
+            <tr *ngFor="let day of days_of_week">
+              <td> {{day}} </td>
+            <td
+              *ngFor="let time of this.movie.runningTimes[day]"
+             
+            >
+              <a routerLink="/booking/{{ movie.id }}/{{ time }}" > {{ time }}  </a>
+            </td>
+          </tr>
+         
+       
+      </table>
+    </div>
   </div>
 </div>

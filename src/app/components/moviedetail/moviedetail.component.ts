@@ -16,6 +16,7 @@ export class MoviedetailComponent implements OnInit {
   }
   movieId = 0;
   public movie: Movie;
+  days_of_week = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
 
   ngOnInit(): void {
     this.getMovieListing();

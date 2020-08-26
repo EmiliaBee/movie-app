@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Movie } from 'src/app/models/movie';
 import {MovieService} from 'src/app/services/movie.service';
-import { ActivatedRoute } from '@angular/router';
 
 
 
@@ -15,6 +14,7 @@ export class MovielistingComponent implements OnInit {
 
   movies: Movie[] = [];
 
+  searchMovie: string;
   constructor(private movieService: MovieService) {}
 
 

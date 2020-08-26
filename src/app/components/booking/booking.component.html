@@ -1,0 +1,14 @@
+<h2>Seat Selection</h2>
+<div class="container">
+ 
+   <div *ngFor="let seat of Seating">
+      <div class="seat" (click)="toggleSeat(seat)"
+       [class.selected]="seat.selected===true"
+       [class.reserved]="seat.reserved===true"
+       
+       ></div>
+   </div> 
+  
+  
+
+  </div>

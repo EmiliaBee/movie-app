@@ -1,0 +1,79 @@
+diff --git a/src/app/components/booking/booking.component.css b/src/app/components/booking/booking.component.css
+new file mode 100644
+index 0000000..302b4d2
+--- /dev/null
++++ b/src/app/components/booking/booking.component.css
+@@ -0,0 +1,3 @@
++.seat {
++    border: 1px red;
++}
+\ No newline at end of file
+diff --git a/src/app/components/booking/booking.component.html b/src/app/components/booking/booking.component.html
+new file mode 100644
+index 0000000..b751c39
+--- /dev/null
++++ b/src/app/components/booking/booking.component.html
+@@ -0,0 +1,8 @@
++<p>booking works!</p>
++
++<div class="container">
++   <div *ngFor = "let seat of Seating"></div> 
++
++<div class="seat" (click)="toggle"
++
++</div>
+\ No newline at end of file
+diff --git a/src/app/components/booking/booking.component.spec.ts b/src/app/components/booking/booking.component.spec.ts
+new file mode 100644
+index 0000000..cc723d8
+--- /dev/null
++++ b/src/app/components/booking/booking.component.spec.ts
+@@ -0,0 +1,25 @@
++import { async, ComponentFixture, TestBed } from '@angular/core/testing';
++
++import { BookingComponent } from './booking.component';
++
++describe('BookingComponent', () => {
++  let component: BookingComponent;
++  let fixture: ComponentFixture<BookingComponent>;
++
++  beforeEach(async(() => {
++    TestBed.configureTestingModule({
++      declarations: [ BookingComponent ]
++    })
++    .compileComponents();
++  }));
++
++  beforeEach(() => {
++    fixture = TestBed.createComponent(BookingComponent);
++    component = fixture.componentInstance;
++    fixture.detectChanges();
++  });
++
++  it('should create', () => {
++    expect(component).toBeTruthy();
++  });
++});
+diff --git a/src/app/components/booking/booking.component.ts b/src/app/components/booking/booking.component.ts
+new file mode 100644
+index 0000000..f7aece7
+--- /dev/null
++++ b/src/app/components/booking/booking.component.ts
+@@ -0,0 +1,17 @@
++import { Component, OnInit } from '@angular/core';
++import { ActivatedRoute } from '@angular/router';
++
++
++@Component({
++  selector: 'app-booking',
++  templateUrl: './booking.component.html',
++  styleUrls: ['./booking.component.css']
++})
++export class BookingComponent implements OnInit {
++
++  constructor() { }
++
++  ngOnInit(): void {
++  }
++
++}
