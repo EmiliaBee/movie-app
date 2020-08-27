@@ -1,3 +1,5 @@
+Project is hosted [here](https://movie-app-eb.herokuapp.com/movies)
+
 # MovieApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
